@@ -1195,10 +1195,6 @@ a:hover {
   opacity: 1;
 }
 
-#essai {
-  scroll-margin-top: 1.5rem;
-}
-
 .formulaire input[type="text"],
 .formulaire input[type="email"],
 .formulaire input[type="tel"],
@@ -1664,10 +1660,6 @@ a:hover {
   .contact-grille {
     grid-template-columns: 1.6fr 1fr;
     gap: 3rem;
-  }
-
-  #essai {
-    scroll-margin-top: 7rem;
   }
 
   /* Variante : image à droite */
