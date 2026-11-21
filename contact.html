@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact et séance d'essai — IRON PULSE, studio de coaching à Lyon 7e</title>
+  <meta name="description" content="Réserve ta séance d'essai gratuite chez IRON PULSE, 27 rue de la Forge à Lyon 7e (métro Jean Macé) : formulaire, téléphone, horaires d'ouverture, accès et questions fréquentes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="entete">
+    <div class="conteneur entete-contenu">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="IRON PULSE, retour à l'accueil" width="240" height="60">
+      </a>
+      <nav class="nav-principale" aria-label="Navigation principale">
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="cours-tarifs.html">Cours &amp; Tarifs</a></li>
+          <li><a href="coachs.html">Coachs</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primaire entete-essai" href="contact.html#essai">Séance d'essai</a>
+    </div>
+  </header>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main id="contenu">
+
+    <!-- Bandeau de page -->
+    <section class="bandeau-page" aria-labelledby="titre-page">
+      <div class="conteneur">
+        <p class="surtitre">Contact</p>
+        <h1 id="titre-page">Pousse la porte du studio</h1>
+        <p class="bandeau-intro">Ta première séance est offerte. Remplissez le formulaire ci-dessous&#8239;: un coach vous rappelle sous 48&#8239;h pour fixer le jour et l'heure de votre séance d'essai.</p>
+      </div>
+    </section>
+
+    <!-- Formulaire et informations pratiques -->
+    <section class="section" aria-labelledby="titre-essai">
+      <div class="conteneur contact-grille">
+
+        <!-- Formulaire de séance d'essai -->
+        <div>
+          <h2 id="titre-essai" class="section-titre">Réserver ma séance d'essai</h2>
+          <p class="section-intro">Un cours collectif au choix et un bilan avec un coach, sans engagement.</p>
+          <form class="formulaire" id="essai" action="#essai" method="post">
+            <p class="note-obligatoire">Les champs marqués <span class="obligatoire">*</span> sont obligatoires.</p>
+
+            <div class="champ-double">
+              <div class="champ">
+                <label for="nom">Nom <span class="obligatoire" aria-hidden="true">*</span></label>
+                <input type="text" id="nom" name="nom" autocomplete="family-name" required>
+              </div>
+              <div class="champ">
+                <label for="prenom">Prénom <span class="obligatoire" aria-hidden="true">*</span></label>
+                <input type="text" id="prenom" name="prenom" autocomplete="given-name" required>
+              </div>
+            </div>
+
+            <div class="champ-double">
+              <div class="champ">
+                <label for="email">E-mail <span class="obligatoire" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="prenom.nom@exemple.fr" required>
+              </div>
+              <div class="champ">
+                <label for="telephone">Téléphone <span class="facultatif">(facultatif)</span></label>
+                <input type="tel" id="telephone" name="telephone" autocomplete="tel" placeholder="06 12 34 56 78">
+              </div>
+            </div>
+
+            <div class="champ">
+              <label for="cours">Cours souhaité <span class="obligatoire" aria-hidden="true">*</span></label>
+              <select id="cours" name="cours" required>
+                <option value="">Choisissez un cours</option>
+                <optgroup label="Cours collectifs">
+                  <option value="hiit-burn">HIIT Burn (45 min)</option>
+                  <option value="force-muscu">Force &amp; Muscu (60 min)</option>
+                  <option value="cross-circuit">Cross Circuit (50 min)</option>
+                  <option value="mobility-reset">Mobility Reset (45 min)</option>
+                </optgroup>
+                <optgroup label="En individuel">
+                  <option value="coaching-personnalise">Coaching personnalisé (60 min)</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <fieldset>
+              <legend>Créneau préféré <span class="obligatoire" aria-hidden="true">*</span></legend>
+              <div class="choix">
+                <label for="creneau-matin"><input type="radio" id="creneau-matin" name="creneau" value="matin" required> Matin (7&nbsp;h)</label>
+                <label for="creneau-midi"><input type="radio" id="creneau-midi" name="creneau" value="midi"> Midi (12&nbsp;h&nbsp;15)</label>
+                <label for="creneau-soir"><input type="radio" id="creneau-soir" name="creneau" value="soir"> Soir (18&nbsp;h&nbsp;30 ou 19&nbsp;h&nbsp;45)</label>
+              </div>
+            </fieldset>
+
+            <div class="champ">
+              <label for="objectif">Votre objectif <span class="facultatif">(facultatif)</span></label>
+              <textarea id="objectif" name="objectif" rows="5" placeholder="Exemple : reprendre le sport après une pause, préparer un trail, gagner en force…"></textarea>
+            </div>
+
+            <div class="champ">
+              <label class="case" for="consentement"><input type="checkbox" id="consentement" name="consentement" value="oui" required> <span>J'accepte d'être recontacté(e) par IRON PULSE au sujet de ma séance d'essai. <span class="obligatoire" aria-hidden="true">*</span></span></label>
+            </div>
+
+            <button class="btn btn-primaire" type="submit">Envoyer ma demande</button>
+          </form>
+        </div>
+
+        <!-- Informations pratiques -->
+        <aside class="infos-contact" aria-label="Informations pratiques">
+          <div class="bloc-info">
+            <h2 class="titre-info">Coordonnées</h2>
+            <address>
+              <dl class="liste-infos">
+                <dt>Adresse</dt>
+                <dd>27 rue de la Forge<br>69007 Lyon</dd>
+                <dt>Téléphone</dt>
+                <dd><a href="tel:+33472184590">04 72 18 45 90</a></dd>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:contact@ironpulse-studio.fr">contact@ironpulse-studio.fr</a></dd>
+              </dl>
+            </address>
+          </div>
+
+          <div class="bloc-info">
+            <h2 class="titre-info">Horaires d'ouverture</h2>
+            <dl class="liste-infos">
+              <dt>Lundi au vendredi</dt>
+              <dd>6&#8239;h&#8239;30 – 22&#8239;h</dd>
+              <dt>Samedi</dt>
+              <dd>8&#8239;h – 18&#8239;h</dd>
+              <dt>Dimanche</dt>
+              <dd>9&#8239;h – 13&#8239;h</dd>
+            </dl>
+          </div>
+
+          <div class="bloc-info">
+            <h2 class="titre-info">Accès</h2>
+            <ul class="liste-puces">
+              <li><strong>Métro</strong>&#8239;: ligne B, arrêt Jean Macé, à 4 minutes à pied.</li>
+              <li><strong>Vélo'v</strong>&#8239;: station Jean Macé, place Jean Macé, avec un abri à vélos devant le studio.</li>
+              <li><strong>Voiture</strong>&#8239;: parking public Jean Macé à 300&#8239;m, stationnement payant dans la rue en journée.</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Questions fréquentes -->
+    <section class="section section-alt" aria-labelledby="titre-faq">
+      <div class="conteneur">
+        <div class="section-entete">
+          <p class="surtitre">Vous vous demandez…</p>
+          <h2 id="titre-faq" class="section-titre">Questions fréquentes</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Faut-il être sportif pour commencer&#8239;?</summary>
+            <p>Non. Chaque cours est limité à 12 personnes et le coach adapte les exercices à votre niveau. Le bilan de la séance d'essai sert justement à partir de là où vous en êtes, que vous repreniez le sport ou que vous soyez déjà confirmé.</p>
+          </details>
+          <details>
+            <summary>Que faut-il apporter&#8239;?</summary>
+            <p>Une tenue de sport, des baskets propres réservées à la salle, une serviette et une gourde. Le matériel d'entraînement est fourni et des casiers sont à votre disposition dans les vestiaires.</p>
+          </details>
+          <details>
+            <summary>Peut-on résilier son abonnement&#8239;?</summary>
+            <p>Oui, à tout moment. Les abonnements Pulse et Iron sont sans engagement&#8239;: il suffit de nous prévenir avant la fin du mois en cours. La carte 10 séances, elle, reste valable 4 mois après l'achat.</p>
+          </details>
+          <details>
+            <summary>Y a-t-il des douches&#8239;?</summary>
+            <p>Oui. Les vestiaires hommes et femmes sont équipés de douches et de casiers, pour repartir au travail directement après votre séance.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentions légales -->
+    <section class="section" id="mentions" aria-labelledby="titre-mentions">
+      <div class="conteneur">
+        <div class="texte-legal">
+          <h2 id="titre-mentions" class="section-titre">Mentions légales</h2>
+          <p><strong>Projet pédagogique.</strong> Ce site a été réalisé dans le cadre d'un devoir de fin de cours HTML &amp; CSS (2026-2027). IRON PULSE est un studio fictif&#8239;: les noms, adresses, numéros, tarifs et témoignages sont inventés. Le formulaire n'envoie aucune donnée.</p>
+          <p><strong>Éditeur.</strong> IRON PULSE (structure fictive), 27 rue de la Forge, 69007 Lyon. Responsable de la publication&#8239;: l'auteur du projet pédagogique.</p>
+          <p><strong>Hébergement.</strong> Site statique destiné à être consulté localement ou sur un hébergement pédagogique, sans cookie ni outil de mesure d'audience.</p>
+          <p><strong>Crédits.</strong> Illustrations originales en SVG créées pour le projet. Polices Anton et Inter fournies par Google Fonts, sous licence SIL Open Font License.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="pied">
+    <div class="conteneur pied-grille">
+      <div class="pied-marque">
+        <img src="images/logo.svg" alt="IRON PULSE" width="240" height="60" loading="lazy">
+        <p class="pied-slogan">Entraîne-toi fort. Progresse vite.</p>
+      </div>
+
+      <div>
+        <h2 class="pied-titre">Nous trouver</h2>
+        <address>
+          <p>27 rue de la Forge<br>69007 Lyon (métro B, Jean Macé)</p>
+          <p><a href="tel:+33472184590">04 72 18 45 90</a></p>
+          <p><a href="mailto:contact@ironpulse-studio.fr">contact@ironpulse-studio.fr</a></p>
+        </address>
+      </div>
+
+      <div>
+        <h2 class="pied-titre">Horaires</h2>
+        <ul class="pied-horaires">
+          <li>Lundi au vendredi&#8239;: 6&#8239;h&#8239;30 – 22&#8239;h</li>
+          <li>Samedi&#8239;: 8&#8239;h – 18&#8239;h</li>
+          <li>Dimanche&#8239;: 9&#8239;h – 13&#8239;h</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="pied-titre">Suivez-nous</h2>
+        <ul class="pied-reseaux">
+          <li>
+            <a href="https://www.instagram.com/ironpulse.lyon/">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+              Instagram <span class="visuellement-cache">(@ironpulse.lyon)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/ironpulse.lyon">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8h3.3Z"/></svg>
+              Facebook <span class="visuellement-cache">(@ironpulse.lyon)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@ironpulse.lyon">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+              YouTube <span class="visuellement-cache">(@ironpulse.lyon)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pied-bas">
+      <div class="conteneur">
+        <p>© 2026 IRON PULSE — Site réalisé dans le cadre d'un projet pédagogique HTML &amp; CSS. Studio fictif. <a href="contact.html#mentions">Mentions légales</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

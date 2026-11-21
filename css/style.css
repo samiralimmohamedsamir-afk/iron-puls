@@ -35,6 +35,7 @@
   --gris-bordure: #2c2f34;
   --gris-survol: #2a2c31;
   --orange-sombre: #2a1a12;
+  --erreur: #ff4d6a;
 
   /* Code couleur discret des cours (toujours doublé du nom du cours) */
   --cours-hiit: #ff5a1f;
@@ -1161,6 +1162,43 @@ a:hover {
   font-weight: 400;
 }
 
+/* Astérisque des champs obligatoires */
+.obligatoire {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.note-obligatoire {
+  margin: 0;
+  color: var(--acier-clair);
+  font-size: 0.95rem;
+}
+
+/* Deux champs côte à côte (empilés sur mobile) */
+.champ-double {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.champ .case {
+  align-items: flex-start;
+  font-weight: 400;
+}
+
+.champ .case input {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.formulaire ::placeholder {
+  color: var(--acier);
+  opacity: 1;
+}
+
+#essai {
+  scroll-margin-top: 1.5rem;
+}
+
 .formulaire input[type="text"],
 .formulaire input[type="email"],
 .formulaire input[type="tel"],
@@ -1186,6 +1224,22 @@ a:hover {
 .formulaire textarea:focus-visible {
   border-color: var(--orange);
   outline-offset: 0;
+}
+
+/* Champ mal rempli, signalé seulement après saisie de l'utilisateur
+   (placé après les styles de base pour l'emporter sur leur bordure) */
+.formulaire input:not([type="radio"], [type="checkbox"]):user-invalid,
+.formulaire select:user-invalid,
+.formulaire textarea:user-invalid {
+  border-color: var(--erreur);
+  box-shadow: inset 4px 0 0 var(--erreur);
+}
+
+/* Boutons radio et case à cocher : contour rouge plutôt qu'une ombre déformée */
+.formulaire input[type="radio"]:user-invalid,
+.formulaire input[type="checkbox"]:user-invalid {
+  outline: 2px solid var(--erreur);
+  outline-offset: 2px;
 }
 
 .formulaire fieldset {
@@ -1226,6 +1280,82 @@ a:hover {
 
 .formulaire .btn {
   justify-self: start;
+}
+
+/* Page contact : formulaire + informations pratiques */
+.contact-grille {
+  display: grid;
+  gap: 3rem;
+}
+
+.contact-grille .section-intro {
+  margin-bottom: 1.5rem;
+}
+
+.infos-contact {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.bloc-info {
+  padding: 1.5rem;
+  border: var(--bordure);
+  border-left: 4px solid var(--orange);
+  background-color: var(--noir-2);
+}
+
+.titre-info {
+  font-size: 1.5rem;
+}
+
+.liste-infos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+}
+
+.liste-infos dt {
+  color: var(--acier-clair);
+  font-weight: 700;
+}
+
+.liste-infos dd {
+  margin: 0;
+}
+
+.liste-infos a {
+  color: var(--blanc);
+}
+
+.liste-infos a:hover {
+  color: var(--orange);
+}
+
+.bloc-info .liste-puces {
+  color: var(--acier-clair);
+}
+
+.bloc-info .liste-puces strong {
+  color: var(--blanc);
+}
+
+.bloc-info .liste-puces li:last-child {
+  margin-bottom: 0;
+}
+
+/* Mentions légales : largeur de lecture limitée */
+.texte-legal {
+  max-width: var(--largeur-texte);
+}
+
+.texte-legal p {
+  color: var(--acier-clair);
+}
+
+.texte-legal strong {
+  color: var(--blanc);
 }
 
 /* FAQ en accordéon natif, sans JavaScript */
@@ -1529,6 +1659,15 @@ a:hover {
   .media-texte {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+  }
+
+  .contact-grille {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 3rem;
+  }
+
+  #essai {
+    scroll-margin-top: 7rem;
   }
 
   /* Variante : image à droite */

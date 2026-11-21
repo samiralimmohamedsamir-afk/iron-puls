@@ -21,12 +21,12 @@ done
 statut=0
 echo "=== 1. Validation W3C (HTML + CSS) ==="
 if [ -n "$VNU" ] && command -v java >/dev/null; then
-  if java -jar "$VNU" --errors-only --format text "${pages[@]}" 2>&1 | grep -v '^Picked up'; then
+  if java -jar "$VNU" --errors-only --format text "${pages[@]}" 2>&1 | grep -v -e '^Picked up' -e 'No errors found'; then
     statut=1
   else
     echo "HTML : 0 erreur"
   fi
-  if java -jar "$VNU" --css --errors-only --format text css/*.css 2>&1 | grep -v '^Picked up'; then
+  if java -jar "$VNU" --css --errors-only --format text css/*.css 2>&1 | grep -v -e '^Picked up' -e 'No errors found'; then
     statut=1
   else
     echo "CSS : 0 erreur"
