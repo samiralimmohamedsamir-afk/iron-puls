@@ -770,6 +770,19 @@ a:hover {
   aspect-ratio: 1 / 1;
 }
 
+.carte-coach .citation {
+  margin-bottom: 1.25rem;
+}
+
+.carte-coach .citation p {
+  color: var(--blanc);
+}
+
+.cours-animes {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
 .carte-coach .role {
   margin-bottom: 0.75rem;
   color: var(--orange);
@@ -1392,6 +1405,13 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Carte orpheline d'une grille de 3 : centrée sur la dernière ligne */
+  .grille-3 > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 0.75rem);
+  }
+
   .pied-grille {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1468,8 +1488,25 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .grille-3 > :last-child:nth-child(odd) {
+    grid-column: auto;
+    width: auto;
+  }
+
   .grille-4 {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Cartes coach : portrait à gauche, texte à droite */
+  .carte-coach {
+    flex-direction: row;
+  }
+
+  .carte-coach img {
+    width: 40%;
+    aspect-ratio: auto;
+    border-right: 3px solid var(--orange);
+    border-bottom: 0;
   }
 
   /* Grille des 5 cours : la 2e ligne (2 cartes) est centrée */
@@ -1483,6 +1520,10 @@ a:hover {
 
   .grille-cours > :nth-child(4) {
     grid-column: 2 / span 2;
+  }
+
+  .grille-cours > :last-child:nth-child(odd) {
+    grid-column: span 2;
   }
 
   .media-texte {

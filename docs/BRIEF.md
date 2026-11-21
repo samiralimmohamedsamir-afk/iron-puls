@@ -22,7 +22,7 @@ mais doivent rester cohérentes d'une page à l'autre (mêmes prix, mêmes noms,
 ### Chiffres clés
 - 2019 : année d'ouverture
 - 12 : personnes maximum par cours
-- 4 coachs diplômés d'État
+- 4 coachs diplômés (BPJEPS, STAPS)
 - 850 membres actifs
 - 23 cours collectifs par semaine (le planning), plus le coaching individuel sur rendez-vous
 
