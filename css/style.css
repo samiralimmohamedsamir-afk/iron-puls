@@ -323,6 +323,11 @@ a:hover {
   gap: 1rem;
 }
 
+.groupe-boutons-centre {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 /* Lien fléché en fin de carte */
 .lien-fleche {
   display: inline-flex;
@@ -474,8 +479,10 @@ a:hover {
   background-color: var(--noir-2);
 }
 
+/* Rayures décoratives : affichées seulement sur grand écran (section 14) */
 .bandeau-page::after {
   content: "";
+  display: none;
   position: absolute;
   top: 0;
   right: -4rem;
@@ -501,6 +508,13 @@ a:hover {
   margin-bottom: 0;
   color: var(--acier-clair);
   font-size: 1.125rem;
+}
+
+/* Le sur-titre garde son style (orange, petit) dans le bandeau */
+.bandeau-page .surtitre {
+  margin-bottom: 0.75rem;
+  color: var(--orange);
+  font-size: 0.875rem;
 }
 
 /* Fil d'Ariane éventuel dans le bandeau */
@@ -1205,6 +1219,10 @@ a:hover {
 
   .hero {
     padding-block: 5rem 6rem;
+  }
+
+  .bandeau-page::after {
+    display: block;
   }
 
   .hero-contenu {
