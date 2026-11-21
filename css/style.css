@@ -34,6 +34,14 @@
   --blanc: #f2f3f5;
   --gris-bordure: #2c2f34;
   --gris-survol: #2a2c31;
+  --orange-sombre: #2a1a12;
+
+  /* Code couleur discret des cours (toujours doublé du nom du cours) */
+  --cours-hiit: #ff5a1f;
+  --cours-force: #b7bdc4;
+  --cours-cross: #ffb020;
+  --cours-mobilite: #4fb6a8;
+  --cours-coaching: #f2f3f5;
 
   /* Polices */
   --police-titre: "Anton", Impact, "Arial Narrow", sans-serif;
@@ -503,18 +511,12 @@ a:hover {
   font-size: clamp(2.4rem, 9vw, 4.25rem);
 }
 
-.bandeau-page p {
+/* Paragraphe d'introduction sous le titre du bandeau */
+.bandeau-intro {
   max-width: 40rem;
   margin-bottom: 0;
   color: var(--acier-clair);
   font-size: 1.125rem;
-}
-
-/* Le sur-titre garde son style (orange, petit) dans le bandeau */
-.bandeau-page .surtitre {
-  margin-bottom: 0.75rem;
-  color: var(--orange);
-  font-size: 0.875rem;
 }
 
 /* Fil d'Ariane éventuel dans le bandeau */
@@ -777,6 +779,85 @@ a:hover {
   font-size: 0.9rem;
 }
 
+/* Cartes de cours : couleur propre à chaque cours */
+.cours-hiit {
+  --couleur-cours: var(--cours-hiit);
+}
+
+.cours-force {
+  --couleur-cours: var(--cours-force);
+}
+
+.cours-cross {
+  --couleur-cours: var(--cours-cross);
+}
+
+.cours-mobilite {
+  --couleur-cours: var(--cours-mobilite);
+}
+
+.cours-coaching {
+  --couleur-cours: var(--cours-coaching);
+}
+
+.carte-cours {
+  scroll-margin-top: 1.5rem;
+}
+
+.carte-cours img {
+  border-bottom-color: var(--couleur-cours);
+}
+
+.carte-cours h3::before {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 0.6rem;
+  background-color: var(--couleur-cours);
+  transform: skewX(-15deg);
+  vertical-align: 0.2em;
+}
+
+.carte-cours:target {
+  border-color: var(--couleur-cours);
+}
+
+.etiquette-intensite {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Jauge d'intensité sur 5 segments (décorative, le texte donne la valeur) */
+.jauge {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 0.5rem;
+  background: repeating-linear-gradient(90deg, var(--noir-3) 0 0.8rem, transparent 0.8rem 1rem);
+}
+
+.jauge::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--niveau) * 1rem);
+  background: repeating-linear-gradient(90deg, var(--couleur-cours, var(--orange)) 0 0.8rem, transparent 0.8rem 1rem);
+}
+
+.jauge-1 {
+  --niveau: 1;
+}
+
+.jauge-3 {
+  --niveau: 3;
+}
+
+.jauge-4 {
+  --niveau: 4;
+}
+
 /* Prix mis en avant */
 .prix {
   font-family: var(--police-titre);
@@ -903,6 +984,141 @@ a:hover {
 .note-tableau {
   color: var(--acier-clair);
   font-size: 0.95rem;
+}
+
+/* Indication de défilement, utile seulement sur petit écran */
+.indication-defilement {
+  margin-bottom: 0.5rem;
+  color: var(--acier-clair);
+  font-size: 0.9rem;
+}
+
+.indication-defilement::after {
+  content: "\00a0→"; /* espace insécable : la flèche reste sur la ligne */
+  color: var(--orange);
+}
+
+/* Légende des couleurs du planning */
+.legende-cours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 1.25rem;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.legende-cours li::before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.45rem;
+  background-color: var(--couleur-cours);
+  vertical-align: -0.05em;
+}
+
+/* Planning : colonne des horaires figée pendant le défilement */
+.tableau-planning {
+  min-width: 44rem;
+}
+
+.tableau-planning th,
+.tableau-planning td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tableau-planning tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  border-right: var(--bordure);
+  background-color: var(--noir);
+  white-space: nowrap;
+}
+
+/* L'en-tête « Horaire » reste aussi figé au-dessus de sa colonne */
+.tableau-planning thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+.creneau {
+  border-left: 4px solid var(--couleur-cours);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Samedi : créneaux à part */
+.planning-samedi {
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  border: var(--bordure);
+  background-color: var(--noir);
+}
+
+.planning-samedi h3 {
+  font-size: 1.25rem;
+}
+
+.planning-samedi ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.planning-samedi li {
+  padding: 0.5rem 0.9rem;
+  border-left: 4px solid var(--couleur-cours);
+  background-color: var(--noir-2);
+  font-weight: 700;
+}
+
+.planning-samedi li strong {
+  margin-right: 0.4rem;
+  color: var(--acier-clair);
+}
+
+/* Tarifs : tableau assez étroit pour tenir sans défilement sur mobile */
+.tableau-tarifs {
+  min-width: 0;
+}
+
+.tableau-tarifs th,
+.tableau-tarifs td {
+  padding: 0.85rem 0.6rem;
+}
+
+.cellule-prix {
+  color: var(--orange);
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.cellule-prix span {
+  display: block;
+  color: var(--acier-clair);
+  font-family: var(--police-texte);
+  font-size: 0.85rem;
+}
+
+.ligne-vedette th .etiquette {
+  display: table;
+  margin-top: 0.4rem;
+  padding-inline: 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.tableau tbody tr.ligne-vedette {
+  background-color: var(--orange-sombre);
+  box-shadow: inset 4px 0 0 var(--orange);
 }
 
 
@@ -1161,6 +1377,15 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .tableau-tarifs th,
+  .tableau-tarifs td {
+    padding: 1rem 1.25rem;
+  }
+
+  .cellule-prix {
+    font-size: 1.75rem;
+  }
+
   .grille-2,
   .grille-3,
   .grille-4 {
@@ -1225,6 +1450,15 @@ a:hover {
     display: block;
   }
 
+  /* Le planning tient en entier : plus besoin d'indiquer le défilement */
+  .indication-defilement {
+    display: none;
+  }
+
+  .carte-cours {
+    scroll-margin-top: 7rem;
+  }
+
   .hero-contenu {
     grid-template-columns: 1.05fr 1fr;
     gap: 3.5rem;
@@ -1236,6 +1470,19 @@ a:hover {
 
   .grille-4 {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Grille des 5 cours : la 2e ligne (2 cartes) est centrée */
+  .grille-cours {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .grille-cours > * {
+    grid-column: span 2;
+  }
+
+  .grille-cours > :nth-child(4) {
+    grid-column: 2 / span 2;
   }
 
   .media-texte {

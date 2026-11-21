@@ -24,7 +24,7 @@ mais doivent rester cohérentes d'une page à l'autre (mêmes prix, mêmes noms,
 - 12 : personnes maximum par cours
 - 4 coachs diplômés d'État
 - 850 membres actifs
-- 40 cours par semaine
+- 23 cours collectifs par semaine (le planning), plus le coaching individuel sur rendez-vous
 
 ## 2. Charte graphique
 | Rôle | Couleur | Variable CSS |
