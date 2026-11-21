@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-labelledby="coach-thomas-titre">
+  <title id="coach-thomas-titre">Portrait illustré de Thomas Diallo, cheveux courts bouclés et lunettes, sweat gris à capuche</title>
+  <defs>
+    <pattern id="coach-thomas-trame" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="2.6" fill="#8b939c"/>
+    </pattern>
+    <clipPath id="coach-thomas-visage">
+      <ellipse cx="300" cy="290" rx="92" ry="112"/>
+    </clipPath>
+  </defs>
+  <!-- Fond graphique -->
+  <rect width="600" height="600" fill="#16171a"/>
+  <polygon points="180,600 440,0 560,0 300,600" fill="#ff5a1f"/>
+  <polygon points="330,600 590,0 616,0 356,600" fill="#ff5a1f" opacity="0.5"/>
+  <polygon points="0,0 220,0 0,220" fill="url(#coach-thomas-trame)" opacity="0.35"/>
+  <!-- Cheveux (arrière) -->
+  
+  <!-- Cou et buste -->
+  <path d="M262 360 H338 V470 H262 Z" fill="#6b4128"/>
+  <path d="M262 380 Q300 420 338 380 V420 Q300 445 262 420 Z" fill="#573220"/>
+  <path d="M40 600 Q56 480 180 458 L262 446 Q300 470 338 446 L420 458 Q544 480 560 600 Z" fill="#8b939c"/>
+  <path d="M206 452 Q300 520 394 452 Q380 500 300 512 Q220 500 206 452 Z" fill="#6f777f"/>
+  <path d="M276 500 V560 M324 500 V560" stroke="#f2f3f5" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="276" cy="564" r="7" fill="#ff5a1f"/><circle cx="324" cy="564" r="7" fill="#ff5a1f"/>
+  <!-- Visage -->
+  <ellipse cx="208" cy="300" rx="16" ry="26" fill="#573220"/>
+  <ellipse cx="392" cy="300" rx="16" ry="26" fill="#573220"/>
+  <ellipse cx="300" cy="290" rx="92" ry="112" fill="#6b4128"/>
+  <path d="M330 180 Q400 230 392 300 Q385 380 300 402 Q370 360 362 280 Q356 220 330 180 Z" fill="#573220" clip-path="url(#coach-thomas-visage)"/>
+  <ellipse cx="266" cy="296" rx="9" ry="11" fill="#0b0b0d"/>
+  <ellipse cx="334" cy="296" rx="9" ry="11" fill="#0b0b0d"/>
+  <circle cx="269" cy="292" r="3" fill="#f2f3f5"/>
+  <circle cx="337" cy="292" r="3" fill="#f2f3f5"/>
+  <path d="M246 266 L284 264 M316 264 L354 266" stroke="#0b0b0d" stroke-width="7" stroke-linecap="round"/>
+  <path d="M300 300 L290 334 Q300 340 310 334" fill="none" stroke="#573220" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M278 354 Q300 372 322 354" fill="none" stroke="#5a2a1e" stroke-width="7" stroke-linecap="round"/>
+  <g fill="none" stroke="#c4c9ce" stroke-width="6">
+    <rect x="236" y="278" width="56" height="38" rx="10"/>
+    <rect x="308" y="278" width="56" height="38" rx="10"/>
+    <path d="M292 292 Q300 286 308 292 M236 290 L212 284 M364 290 L388 284"/>
+  </g>
+  <!-- Cheveux (avant) -->
+  <circle cx="222" cy="232" r="26" fill="#0b0b0d"/><circle cx="246" cy="202" r="28" fill="#0b0b0d"/><circle cx="278" cy="186" r="30" fill="#0b0b0d"/><circle cx="314" cy="184" r="30" fill="#0b0b0d"/><circle cx="348" cy="196" r="28" fill="#0b0b0d"/><circle cx="374" cy="222" r="26" fill="#0b0b0d"/><circle cx="384" cy="252" r="20" fill="#0b0b0d"/><circle cx="214" cy="258" r="18" fill="#0b0b0d"/><circle cx="300" cy="200" r="26" fill="#0b0b0d"/>
+</svg>

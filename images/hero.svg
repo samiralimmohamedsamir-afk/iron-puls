@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="hero-titre">
+  <title id="hero-titre">Athlète lancé en plein sprint sur fond de bandes orange</title>
+  <defs>
+    <pattern id="hero-trame" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="3.2" fill="#8b939c"/>
+    </pattern>
+    <linearGradient id="hero-fond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16171a"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#hero-fond)"/>
+  <!-- Trame de points en haut à gauche -->
+  <polygon points="0,0 460,0 0,420" fill="url(#hero-trame)" opacity="0.28"/>
+  <!-- Cercles de cible derrière l'athlète -->
+  <g fill="none" stroke="#8b939c" opacity="0.35">
+    <circle cx="760" cy="330" r="300" stroke-width="2"/>
+    <circle cx="760" cy="330" r="230" stroke-width="2" stroke-dasharray="6 14"/>
+  </g>
+  <!-- Grande bande diagonale orange -->
+  <polygon points="520,0 980,0 760,800 300,800" fill="#ff5a1f"/>
+  <polygon points="1010,0 1060,0 840,800 790,800" fill="#ff5a1f" opacity="0.75"/>
+  <polygon points="1100,0 1125,0 905,800 880,800" fill="#ff5a1f" opacity="0.45"/>
+  <polygon points="1165,0 1177,0 957,800 945,800" fill="#ff5a1f" opacity="0.25"/>
+  <!-- Lignes de vitesse -->
+  <g stroke="#f2f3f5" stroke-linecap="round" opacity="0.85">
+    <line x1="80" y1="300" x2="330" y2="300" stroke-width="10"/>
+    <line x1="170" y1="360" x2="380" y2="360" stroke-width="6"/>
+    <line x1="40" y1="430" x2="300" y2="430" stroke-width="14"/>
+    <line x1="200" y1="505" x2="350" y2="505" stroke-width="6"/>
+    <line x1="110" y1="575" x2="320" y2="575" stroke-width="10"/>
+  </g>
+  <g stroke="#ff5a1f" stroke-linecap="round">
+    <line x1="20" y1="470" x2="150" y2="470" stroke-width="6"/>
+    <line x1="60" y1="640" x2="240" y2="640" stroke-width="8"/>
+  </g>
+  <!-- Traînées de mouvement -->
+  <g transform="translate(560 470)" opacity="0.22" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 -175 L-20 -160 L-75 -88" stroke-width="40" stroke="#0b0b0d"/>
+    <path d="M0 0 L-85 110 L-205 138" stroke-width="46" stroke="#0b0b0d"/>
+    <path d="M70 -180 L0 0" stroke-width="64" stroke="#0b0b0d"/>
+    <path d="M0 0 L130 40 L100 178 L148 186" stroke-width="46" stroke="#0b0b0d"/>
+    <path d="M70 -180 L150 -118 L205 -190" stroke-width="40" stroke="#0b0b0d"/>
+    <circle cx="102" cy="-252" r="48" fill="#0b0b0d"/>
+  </g>
+  <g transform="translate(630 470)" opacity="0.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 -175 L-20 -160 L-75 -88" stroke-width="40" stroke="#0b0b0d"/>
+    <path d="M0 0 L-85 110 L-205 138" stroke-width="46" stroke="#0b0b0d"/>
+    <path d="M70 -180 L0 0" stroke-width="64" stroke="#0b0b0d"/>
+    <path d="M0 0 L130 40 L100 178 L148 186" stroke-width="46" stroke="#0b0b0d"/>
+    <path d="M70 -180 L150 -118 L205 -190" stroke-width="40" stroke="#0b0b0d"/>
+    <circle cx="102" cy="-252" r="48" fill="#0b0b0d"/>
+  </g>
+  <!-- Athlète -->
+  <g transform="translate(705 470)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 -175 L-20 -160 L-75 -88" stroke-width="40" stroke="#8b939c"/>
+    <path d="M0 0 L-85 110 L-205 138" stroke-width="46" stroke="#8b939c"/>
+    <path d="M70 -180 L0 0" stroke-width="64" stroke="#f2f3f5"/>
+    <path d="M0 0 L130 40 L100 178 L148 186" stroke-width="46" stroke="#f2f3f5"/>
+    <path d="M70 -180 L150 -118 L205 -190" stroke-width="40" stroke="#f2f3f5"/>
+    <circle cx="102" cy="-252" r="48" fill="#f2f3f5"/>
+  </g>
+  <!-- Sol et pulsation -->
+  <line x1="0" y1="672" x2="1200" y2="672" stroke="#f2f3f5" stroke-width="4" opacity="0.5"/>
+  <path d="M0 735 H120 L145 700 L170 770 L200 680 L228 752 L248 735 H1200" fill="none" stroke="#ff5a1f" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Éclats de poussière -->
+  <g fill="#f2f3f5">
+    <polygon points="880,660 905,640 896,668"/>
+    <polygon points="915,668 948,655 930,676"/>
+    <polygon points="470,648 450,630 476,640"/>
+  </g>
+</svg>

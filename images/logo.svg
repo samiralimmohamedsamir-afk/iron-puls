@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" role="img" aria-labelledby="logo-titre">
+  <title id="logo-titre">IRON PULSE</title>
+  <!-- Pictogramme : parallélogramme orange, haltère et pulsation -->
+  <polygon points="12,4 58,4 48,56 2,56" fill="#ff5a1f"/>
+  <g fill="#0b0b0d">
+    <rect x="9" y="19" width="6" height="22" rx="1"/>
+    <rect x="16" y="23" width="4" height="14" rx="1"/>
+    <rect x="41" y="19" width="6" height="22" rx="1"/>
+    <rect x="36" y="23" width="4" height="14" rx="1"/>
+  </g>
+  <path d="M20 30 H24 L27 22 L30 38 L33 26 L35 30 H36" fill="none" stroke="#0b0b0d" stroke-width="3" stroke-linejoin="miter" stroke-linecap="butt"/>
+  <!-- Lettrage géométrique (tracés, aucune police requise) -->
+  <g fill="none" stroke-width="5" stroke-linejoin="miter" stroke-linecap="butt" transform="translate(70 14) skewX(-10)">
+    <g stroke="#f2f3f5">
+      <path d="M2.5 0 V32"/>
+      <path d="M11.5 32 V2.5 H22.5 V17 H11.5 M16 17 L22.5 23 V32"/>
+      <path d="M31.5 2.5 H42.5 V29.5 H31.5 Z"/>
+      <path d="M51.5 32 V0 M51.5 4 L62.5 28 M62.5 32 V0"/>
+    </g>
+    <g stroke="#ff5a1f">
+      <path d="M76.5 32 V2.5 H87.5 V17 H76.5"/>
+      <path d="M96.5 0 V29.5 H107.5 V0"/>
+      <path d="M116.5 0 V29.5 H128"/>
+      <path d="M148 2.5 H134.5 V16 H145.5 V29.5 H132"/>
+      <path d="M166 2.5 H154.5 V29.5 H166 M154.5 16 H164"/>
+    </g>
+  </g>
+</svg>

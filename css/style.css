@@ -1,0 +1,1253 @@
+/* =====================================================================
+   IRON PULSE — feuille de style unique du site
+   Approche « mobile first » : styles de base pour le téléphone,
+   puis media queries (section 14) pour la tablette et l'ordinateur.
+
+   Sommaire
+   1.  Variables
+   2.  Reset et base
+   3.  Typographie
+   4.  Utilitaires et mise en page
+   5.  Boutons et liens
+   6.  En-tête et menu
+   7.  Bannière d'accueil (hero) et bandeau de page intérieure
+   8.  Sections et titres de section
+   9.  Cartes, grilles et blocs de contenu
+   10. Témoignages et citations
+   11. Tableaux
+   12. Formulaire et FAQ (details / summary)
+   13. Pied de page
+   14. Media queries (tablette et ordinateur)
+   ===================================================================== */
+
+
+/* === 1. Variables === */
+:root {
+  /* Couleurs de la charte */
+  --noir: #0b0b0d;
+  --noir-2: #16171a;
+  --noir-3: #202226;
+  --orange: #ff5a1f;
+  --orange-clair: #ff7a45;
+  --acier: #8b939c;
+  --acier-clair: #b7bdc4;
+  --blanc: #f2f3f5;
+  --gris-bordure: #2c2f34;
+  --gris-survol: #2a2c31;
+
+  /* Polices */
+  --police-titre: "Anton", Impact, "Arial Narrow", sans-serif;
+  --police-texte: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Mesures */
+  --largeur-max: 1200px;
+  --largeur-texte: 68ch;
+  --gouttiere: 1.25rem;
+  --espace-section: 4rem;
+  --bordure: 1px solid var(--gris-bordure);
+  --transition: 0.2s ease;
+}
+
+
+/* === 2. Reset et base === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--noir);
+  color: var(--blanc);
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+blockquote {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/* Cible des ancres : laisse de l'air sous l'en-tête */
+:target {
+  scroll-margin-top: 1.5rem;
+}
+
+/* Focus clavier bien visible sur tous les éléments interactifs */
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+
+/* === 3. Typographie === */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.75rem;
+  font-family: var(--police-titre);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 11vw, 5.25rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 7vw, 3rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: var(--orange);
+  text-underline-offset: 0.2em;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--orange-clair);
+}
+
+.texte-orange {
+  color: var(--orange);
+}
+
+.texte-acier {
+  color: var(--acier-clair);
+}
+
+/* Petit sur-titre en capitales au-dessus d'un titre */
+.surtitre {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--orange);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+/* === 4. Utilitaires et mise en page === */
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur-max);
+  margin-inline: auto;
+  padding-inline: var(--gouttiere);
+}
+
+/* Texte réservé aux lecteurs d'écran */
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Lien d'évitement : visible seulement au focus clavier */
+.lien-evitement {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background-color: var(--orange);
+  color: var(--noir);
+  font-weight: 700;
+  transform: translateY(-200%);
+}
+
+.lien-evitement:focus {
+  transform: translateY(0);
+  outline-color: var(--blanc);
+}
+
+.centre {
+  text-align: center;
+}
+
+/* Grilles réutilisables : une colonne sur mobile, plus sur grand écran */
+.grille {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Liste à puces carrées orange */
+.liste-puces {
+  list-style: none;
+}
+
+.liste-puces li {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+}
+
+.liste-puces li::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  background-color: var(--orange);
+  transform: rotate(45deg);
+}
+
+
+/* === 5. Boutons et liens === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Bouton orange : texte noir pour un contraste lisible */
+.btn-primaire {
+  background-color: var(--orange);
+  color: var(--noir);
+}
+
+.btn-primaire:hover {
+  background-color: var(--orange-clair);
+  color: var(--noir);
+}
+
+.btn-primaire:focus-visible {
+  outline-color: var(--blanc);
+}
+
+/* Bouton contour blanc */
+.btn-secondaire {
+  border-color: var(--blanc);
+  background-color: transparent;
+  color: var(--blanc);
+}
+
+.btn-secondaire:hover {
+  background-color: var(--blanc);
+  color: var(--noir);
+}
+
+/* Bouton noir, pour les fonds orange */
+.btn-sombre {
+  background-color: var(--noir);
+  color: var(--blanc);
+}
+
+.btn-sombre:hover {
+  background-color: var(--noir-3);
+  color: var(--blanc);
+}
+
+.btn-sombre:focus-visible {
+  outline-color: var(--noir);
+}
+
+/* Groupe de boutons côte à côte qui passent à la ligne */
+.groupe-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Lien fléché en fin de carte */
+.lien-fleche {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+}
+
+.lien-fleche::after {
+  content: "→";
+  transition: transform var(--transition);
+}
+
+.lien-fleche:hover::after {
+  transform: translateX(4px);
+}
+
+
+/* === 6. En-tête et menu === */
+.entete {
+  border-bottom: 3px solid var(--orange);
+  background-color: var(--noir);
+}
+
+.entete-contenu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding-block: 0.875rem;
+}
+
+.logo {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 140px;
+}
+
+/* Bouton « Séance d'essai » : à droite du logo sur mobile */
+.entete-essai {
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+/* Sur mobile, le menu occupe toute la largeur sous le logo */
+.nav-principale {
+  order: 3;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.15rem;
+  list-style: none;
+  border-top: var(--bordure);
+  padding-top: 0.6rem;
+}
+
+.menu a {
+  display: block;
+  padding: 0.55rem 0.5rem;
+  border-bottom: 3px solid transparent;
+  color: var(--blanc);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  color: var(--orange);
+}
+
+/* Page courante signalée */
+.menu a[aria-current="page"] {
+  border-bottom-color: var(--orange);
+  color: var(--orange);
+}
+
+
+/* === 7. Bannière d'accueil (hero) et bandeau de page intérieure === */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 3rem 3.5rem;
+  background-color: var(--noir);
+}
+
+/* Bande diagonale décorative en arrière-plan */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30%;
+  width: 70%;
+  height: 100%;
+  background-color: var(--noir-2);
+  transform: skewX(-14deg);
+}
+
+.hero-contenu {
+  position: relative;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero h1 {
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--orange);
+}
+
+.hero-texte {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+  color: var(--acier-clair);
+  font-size: 1.125rem;
+}
+
+.hero-image {
+  border: 3px solid var(--noir-3);
+  box-shadow: 12px 12px 0 var(--orange);
+}
+
+/* Bandeau titre des pages intérieures */
+.bandeau-page {
+  position: relative;
+  overflow: hidden;
+  padding-block: 3rem;
+  border-bottom: var(--bordure);
+  background-color: var(--noir-2);
+}
+
+.bandeau-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -4rem;
+  width: 9rem;
+  height: 100%;
+  background: repeating-linear-gradient(90deg, var(--orange) 0 1.5rem, transparent 1.5rem 2.5rem);
+  opacity: 0.85;
+  transform: skewX(-18deg);
+}
+
+.bandeau-page .conteneur {
+  position: relative;
+  z-index: 1;
+}
+
+.bandeau-page h1 {
+  max-width: 14ch;
+  font-size: clamp(2.4rem, 9vw, 4.25rem);
+}
+
+.bandeau-page p {
+  max-width: 40rem;
+  margin-bottom: 0;
+  color: var(--acier-clair);
+  font-size: 1.125rem;
+}
+
+/* Fil d'Ariane éventuel dans le bandeau */
+.fil-ariane {
+  margin-bottom: 0.75rem;
+  color: var(--acier);
+  font-size: 0.9rem;
+}
+
+.fil-ariane a {
+  color: var(--acier-clair);
+}
+
+
+/* === 8. Sections et titres de section === */
+.section {
+  padding-block: var(--espace-section);
+}
+
+.section-alt {
+  border-block: var(--bordure);
+  background-color: var(--noir-2);
+}
+
+.section-entete {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-entete.centre {
+  margin-inline: auto;
+}
+
+/* Titre de section souligné d'une barre orange */
+.section-titre::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.35rem;
+  margin-top: 0.75rem;
+  background-color: var(--orange);
+  transform: skewX(-20deg);
+}
+
+.section-entete.centre .section-titre::after {
+  margin-inline: auto;
+}
+
+.section-intro {
+  margin-bottom: 0;
+  color: var(--acier-clair);
+  font-size: 1.0625rem;
+}
+
+/* Bandeau des chiffres clés */
+.chiffres {
+  position: relative;
+  background-color: var(--orange);
+  color: var(--noir);
+}
+
+.chiffres-liste {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem 1rem;
+  padding-block: 2.5rem;
+  list-style: none;
+  text-align: center;
+}
+
+.chiffres-liste strong {
+  display: block;
+  font-family: var(--police-titre);
+  font-size: clamp(2.75rem, 12vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.chiffres-liste span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Appel à l'action en fin de page */
+.appel {
+  position: relative;
+  overflow: hidden;
+  padding-block: 4rem;
+  background-color: var(--orange);
+  color: var(--noir);
+  text-align: center;
+}
+
+.appel::before,
+.appel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 6rem;
+  height: 100%;
+  background-color: var(--noir);
+  opacity: 0.12;
+  transform: skewX(-18deg);
+}
+
+.appel::before {
+  left: -2rem;
+}
+
+.appel::after {
+  right: -2rem;
+}
+
+.appel .conteneur {
+  position: relative;
+  z-index: 1;
+}
+
+.appel h2 {
+  font-size: clamp(2.2rem, 8vw, 3.75rem);
+}
+
+.appel p {
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  font-size: 1.125rem;
+}
+
+
+/* === 9. Cartes, grilles et blocs de contenu === */
+.carte {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--bordure);
+  background-color: var(--noir-2);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.carte:hover {
+  border-color: var(--orange);
+  transform: translateY(-4px);
+}
+
+.carte img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom: 3px solid var(--orange);
+}
+
+.carte-corps {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.carte-corps p {
+  color: var(--acier-clair);
+}
+
+/* Le lien de la carte reste collé en bas */
+.carte-corps .lien-fleche {
+  margin-top: auto;
+}
+
+/* Méta-informations d'une carte (durée, intensité…) */
+.carte-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.etiquette {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--acier);
+  color: var(--blanc);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.etiquette-orange {
+  border-color: var(--orange);
+  background-color: var(--orange);
+  color: var(--noir);
+}
+
+/* Atouts numérotés (« Pourquoi IRON PULSE ») */
+.atouts {
+  counter-reset: atout;
+  list-style: none;
+}
+
+.atout {
+  position: relative;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border-left: 4px solid var(--orange);
+  background-color: var(--noir);
+  counter-increment: atout;
+}
+
+.atout::before {
+  content: "0" counter(atout);
+  display: block;
+  margin-bottom: 0.5rem;
+  color: transparent;
+  font-family: var(--police-titre);
+  font-size: 3rem;
+  line-height: 1;
+  -webkit-text-stroke: 1px var(--acier);
+}
+
+.atout h3 {
+  font-size: 1.4rem;
+}
+
+.atout p {
+  margin-bottom: 0;
+  color: var(--acier-clair);
+}
+
+/* Bloc image + texte (pages intérieures) */
+.media-texte {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.media-texte img {
+  width: 100%;
+  border: 3px solid var(--noir-3);
+  box-shadow: 10px 10px 0 var(--orange);
+}
+
+.media-texte p {
+  color: var(--acier-clair);
+}
+
+/* Carte de coach (portrait carré) */
+.carte-coach img {
+  aspect-ratio: 1 / 1;
+}
+
+.carte-coach .role {
+  margin-bottom: 0.75rem;
+  color: var(--orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+/* Prix mis en avant */
+.prix {
+  font-family: var(--police-titre);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--orange);
+}
+
+
+/* === 10. Témoignages et citations === */
+.temoignage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 4.5rem 1.5rem 1.5rem;
+  border: var(--bordure);
+  border-top: 4px solid var(--orange);
+  background-color: var(--noir-2);
+}
+
+.temoignage blockquote {
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+/* Grand guillemet décoratif en haut à gauche */
+.temoignage blockquote::before {
+  content: "«";
+  position: absolute;
+  top: 0.75rem;
+  left: 1.4rem;
+  color: var(--orange);
+  font-family: var(--police-titre);
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.temoignage blockquote p {
+  margin-bottom: 0;
+  font-size: 1.0625rem;
+}
+
+.temoignage figcaption {
+  color: var(--acier-clair);
+  font-size: 0.95rem;
+}
+
+.temoignage figcaption strong {
+  display: block;
+  color: var(--blanc);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Citation courte (ex. phrase d'un coach) */
+.citation {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--orange);
+  color: var(--blanc);
+  font-style: italic;
+}
+
+.citation p {
+  margin-bottom: 0;
+}
+
+
+/* === 11. Tableaux === */
+/* Le conteneur fait défiler le tableau horizontalement sur petit écran */
+.tableau-conteneur {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border: var(--bordure);
+}
+
+.tableau {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  background-color: var(--noir-2);
+}
+
+.tableau caption {
+  padding: 1rem;
+  border-bottom: var(--bordure);
+  background-color: var(--noir);
+  color: var(--acier-clair);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.tableau th,
+.tableau td {
+  padding: 0.85rem 1rem;
+  border-bottom: var(--bordure);
+  text-align: left;
+  vertical-align: top;
+}
+
+.tableau thead th {
+  background-color: var(--orange);
+  color: var(--noir);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tableau tbody th {
+  color: var(--blanc);
+  font-weight: 700;
+}
+
+.tableau tbody tr:nth-child(even) {
+  background-color: var(--noir-3);
+}
+
+.tableau tbody tr:hover {
+  background-color: var(--gris-survol);
+}
+
+.note-tableau {
+  color: var(--acier-clair);
+  font-size: 0.95rem;
+}
+
+
+/* === 12. Formulaire et FAQ (details / summary) === */
+.formulaire {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: var(--bordure);
+  border-top: 4px solid var(--orange);
+  background-color: var(--noir-2);
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.champ label,
+.formulaire legend {
+  font-weight: 700;
+}
+
+.facultatif {
+  color: var(--acier);
+  font-weight: 400;
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="email"],
+.formulaire input[type="tel"],
+.formulaire select,
+.formulaire textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--acier);
+  border-radius: 0;
+  background-color: var(--noir);
+  color: var(--blanc);
+  font-size: 1rem;
+}
+
+.formulaire textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.formulaire input:focus-visible,
+.formulaire select:focus-visible,
+.formulaire textarea:focus-visible {
+  border-color: var(--orange);
+  outline-offset: 0;
+}
+
+.formulaire fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.formulaire legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+/* Boutons radio et case à cocher */
+.choix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.choix label,
+.case {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.formulaire input[type="radio"],
+.formulaire input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  accent-color: var(--orange);
+}
+
+.formulaire .btn {
+  justify-self: start;
+}
+
+/* FAQ en accordéon natif, sans JavaScript */
+.faq details {
+  margin-bottom: 0.75rem;
+  border: var(--bordure);
+  background-color: var(--noir-2);
+}
+
+.faq summary {
+  position: relative;
+  padding: 1rem 3rem 1rem 1.25rem;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  color: var(--orange);
+  font-size: 1.5rem;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.faq details[open] summary::after {
+  content: "–";
+}
+
+.faq details[open] summary {
+  border-bottom: var(--bordure);
+}
+
+.faq details p {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  color: var(--acier-clair);
+}
+
+
+/* === 13. Pied de page === */
+.pied {
+  border-top: 4px solid var(--orange);
+  background-color: var(--noir-2);
+  color: var(--acier-clair);
+  font-size: 0.95rem;
+}
+
+.pied-grille {
+  display: grid;
+  gap: 2rem;
+  padding-block: 3rem 2rem;
+}
+
+.pied-marque img {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+.pied-slogan {
+  color: var(--blanc);
+  font-family: var(--police-titre);
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.pied-titre {
+  margin-bottom: 1rem;
+  color: var(--blanc);
+  font-size: 1.15rem;
+}
+
+.pied p {
+  margin-bottom: 0.5rem;
+}
+
+.pied a {
+  color: var(--blanc);
+}
+
+.pied a:hover {
+  color: var(--orange);
+}
+
+.pied-horaires {
+  list-style: none;
+}
+
+.pied-horaires li {
+  margin-bottom: 0.35rem;
+}
+
+.pied-reseaux {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.pied-reseaux a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 2.75rem;
+  text-decoration: none;
+}
+
+.pied-reseaux svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.45rem;
+  background-color: var(--noir-3);
+  fill: currentColor;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.pied-reseaux a:hover svg {
+  background-color: var(--orange);
+  color: var(--noir);
+}
+
+.pied-bas {
+  border-top: var(--bordure);
+  padding-block: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.pied-bas p {
+  margin: 0;
+}
+
+
+/* === 14. Media queries (tablette et ordinateur) === */
+
+/* Tablette : à partir de 600 px */
+@media (min-width: 600px) {
+  :root {
+    --gouttiere: 2rem;
+    --espace-section: 5rem;
+  }
+
+  .logo img {
+    width: 200px;
+  }
+
+  .entete-essai {
+    min-height: 3rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .chiffres-liste {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grille-2,
+  .grille-3,
+  .grille-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pied-grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formulaire {
+    padding: 2rem;
+  }
+
+  .formulaire .champ-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Ordinateur : à partir de 960 px */
+@media (min-width: 960px) {
+  .entete {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  /* Menu horizontal sur une seule ligne : logo, liens, bouton */
+  .entete-contenu {
+    flex-wrap: nowrap;
+  }
+
+  .nav-principale {
+    order: 0;
+    width: auto;
+    margin-left: auto;
+  }
+
+  .menu {
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .menu a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  :target {
+    scroll-margin-top: 7rem;
+  }
+
+  .hero {
+    padding-block: 5rem 6rem;
+  }
+
+  .hero-contenu {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 3.5rem;
+  }
+
+  .grille-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grille-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .media-texte {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  /* Variante : image à droite */
+  .media-texte-inverse img {
+    order: 2;
+  }
+
+  .pied-grille {
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  }
+
+  .appel {
+    padding-block: 5rem;
+  }
+}
+
+/* Préférence système : animations réduites */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

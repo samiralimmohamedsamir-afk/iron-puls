@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="mobilite-titre">
+  <title id="mobilite-titre">Pratiquante en posture d'étirement latéral sur un tapis</title>
+  <defs>
+    <pattern id="mobilite-trame" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="3" fill="#8b939c"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#0b0b0d"/>
+  <polygon points="0,800 0,420 380,800" fill="url(#mobilite-trame)" opacity="0.25"/>
+  <!-- Cercles d'onde, respiration -->
+  <g fill="none" stroke="#8b939c" opacity="0.35">
+    <circle cx="620" cy="400" r="330" stroke-width="2"/>
+    <circle cx="620" cy="400" r="390" stroke-width="2" stroke-dasharray="4 14"/>
+  </g>
+  <circle cx="620" cy="400" r="260" fill="#ff5a1f"/>
+  <polygon points="1010,0 1050,0 870,800 830,800" fill="#ff5a1f" opacity="0.5"/>
+  <polygon points="1080,0 1096,0 916,800 900,800" fill="#ff5a1f" opacity="0.3"/>
+  <rect x="0" y="690" width="1200" height="110" fill="#16171a"/>
+  <line x1="0" y1="690" x2="1200" y2="690" stroke="#8b939c" stroke-width="3" opacity="0.6"/>
+  <!-- Tapis -->
+  <polygon points="290,668 900,668 930,690 260,690" fill="#8b939c"/>
+  <rect x="260" y="690" width="670" height="8" fill="#4a4f57"/>
+  <circle cx="940" cy="676" r="22" fill="#8b939c"/>
+  <circle cx="940" cy="676" r="10" fill="none" stroke="#4a4f57" stroke-width="4"/>
+  <!-- Pratiquante en posture du triangle -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M560 470 L376 652 L336 656" stroke-width="46" stroke="#8b939c"/>
+    <path d="M736 404 L650 210" stroke-width="36" stroke="#f2f3f5"/>
+    <path d="M560 470 L786 652 L830 656" stroke-width="46" stroke="#f2f3f5"/>
+    <path d="M560 470 L736 404" stroke-width="72" stroke="#f2f3f5"/>
+    <path d="M736 404 L800 600" stroke-width="36" stroke="#f2f3f5"/>
+  </g>
+  <circle cx="806" cy="372" r="42" fill="#f2f3f5"/>
+  <path d="M834 342 C 870 324, 890 340, 896 368 C 876 356, 860 352, 846 356 Z" fill="#f2f3f5"/>
+  <!-- Arcs de souffle -->
+  <g fill="none" stroke="#f2f3f5" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <path d="M590 160 A70 70 0 0 1 700 150"/>
+    <path d="M560 120 A110 110 0 0 1 730 108"/>
+  </g>
+</svg>
