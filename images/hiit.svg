@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="hiit-titre">
+  <title id="hiit-titre">Sprinteur devant un grand chronomètre, symbole du HIIT</title>
+  <defs>
+    <pattern id="hiit-trame" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="3" fill="#8b939c"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#0b0b0d"/>
+  <polygon points="760,800 1200,380 1200,800" fill="url(#hiit-trame)" opacity="0.25"/>
+  <!-- Bande diagonale derrière le sprinteur -->
+  <polygon points="250,0 540,0 320,800 30,800" fill="#ff5a1f"/>
+  <polygon points="575,0 605,0 385,800 355,800" fill="#ff5a1f" opacity="0.5"/>
+  <!-- Chronomètre -->
+  <g>
+    <rect x="756" y="77" width="68" height="44" rx="8" fill="#8b939c"/>
+    <rect x="770" y="115" width="40" height="50" fill="#8b939c"/>
+    <g transform="rotate(42 790 430)">
+      <rect x="772" y="125" width="36" height="50" rx="6" fill="#ff5a1f"/>
+    </g>
+    <circle cx="790" cy="430" r="275" fill="none" stroke="#ff5a1f" stroke-width="14" stroke-dasharray="1244.1 1727.9" transform="rotate(-90 790 430)" stroke-linecap="round"/>
+    <circle cx="790" cy="430" r="275" fill="none" stroke="#8b939c" stroke-width="2" opacity="0.4"/>
+    <circle cx="790" cy="430" r="249" fill="#16171a" stroke="#8b939c" stroke-width="22"/>
+    <circle cx="790" cy="430" r="175" fill="none" stroke="#f2f3f5" stroke-width="1.5" opacity="0.15"/>
+    <!-- Secteur écoulé -->
+    <path d="M790 430 L790 255 A175 175 0 1 1 617.7 460.4 Z" fill="#ff5a1f" opacity="0.3"/>
+    <g stroke="#f2f3f5" stroke-linecap="butt">
+      <line x1="790.0" y1="241.0" x2="790.0" y2="207.0" stroke-width="8"/>
+      <line x1="811.8" y1="222.1" x2="813.3" y2="208.2" stroke-width="3"/>
+      <line x1="833.5" y1="225.6" x2="836.4" y2="211.9" stroke-width="3"/>
+      <line x1="854.6" y1="231.2" x2="858.9" y2="217.9" stroke-width="3"/>
+      <line x1="875.0" y1="239.1" x2="880.7" y2="226.3" stroke-width="3"/>
+      <line x1="884.5" y1="266.3" x2="901.5" y2="236.9" stroke-width="8"/>
+      <line x1="912.8" y1="260.9" x2="921.1" y2="249.6" stroke-width="3"/>
+      <line x1="929.8" y1="274.7" x2="939.2" y2="264.3" stroke-width="3"/>
+      <line x1="945.3" y1="290.2" x2="955.7" y2="280.8" stroke-width="3"/>
+      <line x1="959.1" y1="307.2" x2="970.4" y2="298.9" stroke-width="3"/>
+      <line x1="953.7" y1="335.5" x2="983.1" y2="318.5" stroke-width="8"/>
+      <line x1="980.9" y1="345.0" x2="993.7" y2="339.3" stroke-width="3"/>
+      <line x1="988.8" y1="365.4" x2="1002.1" y2="361.1" stroke-width="3"/>
+      <line x1="994.4" y1="386.5" x2="1008.1" y2="383.6" stroke-width="3"/>
+      <line x1="997.9" y1="408.2" x2="1011.8" y2="406.7" stroke-width="3"/>
+      <line x1="979.0" y1="430.0" x2="1013.0" y2="430.0" stroke-width="8"/>
+      <line x1="997.9" y1="451.8" x2="1011.8" y2="453.3" stroke-width="3"/>
+      <line x1="994.4" y1="473.5" x2="1008.1" y2="476.4" stroke-width="3"/>
+      <line x1="988.8" y1="494.6" x2="1002.1" y2="498.9" stroke-width="3"/>
+      <line x1="980.9" y1="515.0" x2="993.7" y2="520.7" stroke-width="3"/>
+      <line x1="953.7" y1="524.5" x2="983.1" y2="541.5" stroke-width="8"/>
+      <line x1="959.1" y1="552.8" x2="970.4" y2="561.1" stroke-width="3"/>
+      <line x1="945.3" y1="569.8" x2="955.7" y2="579.2" stroke-width="3"/>
+      <line x1="929.8" y1="585.3" x2="939.2" y2="595.7" stroke-width="3"/>
+      <line x1="912.8" y1="599.1" x2="921.1" y2="610.4" stroke-width="3"/>
+      <line x1="884.5" y1="593.7" x2="901.5" y2="623.1" stroke-width="8"/>
+      <line x1="875.0" y1="620.9" x2="880.7" y2="633.7" stroke-width="3"/>
+      <line x1="854.6" y1="628.8" x2="858.9" y2="642.1" stroke-width="3"/>
+      <line x1="833.5" y1="634.4" x2="836.4" y2="648.1" stroke-width="3"/>
+      <line x1="811.8" y1="637.9" x2="813.3" y2="651.8" stroke-width="3"/>
+      <line x1="790.0" y1="619.0" x2="790.0" y2="653.0" stroke-width="8"/>
+      <line x1="768.2" y1="637.9" x2="766.7" y2="651.8" stroke-width="3"/>
+      <line x1="746.5" y1="634.4" x2="743.6" y2="648.1" stroke-width="3"/>
+      <line x1="725.4" y1="628.8" x2="721.1" y2="642.1" stroke-width="3"/>
+      <line x1="705.0" y1="620.9" x2="699.3" y2="633.7" stroke-width="3"/>
+      <line x1="695.5" y1="593.7" x2="678.5" y2="623.1" stroke-width="8"/>
+      <line x1="667.2" y1="599.1" x2="658.9" y2="610.4" stroke-width="3"/>
+      <line x1="650.2" y1="585.3" x2="640.8" y2="595.7" stroke-width="3"/>
+      <line x1="634.7" y1="569.8" x2="624.3" y2="579.2" stroke-width="3"/>
+      <line x1="620.9" y1="552.8" x2="609.6" y2="561.1" stroke-width="3"/>
+      <line x1="626.3" y1="524.5" x2="596.9" y2="541.5" stroke-width="8"/>
+      <line x1="599.1" y1="515.0" x2="586.3" y2="520.7" stroke-width="3"/>
+      <line x1="591.2" y1="494.6" x2="577.9" y2="498.9" stroke-width="3"/>
+      <line x1="585.6" y1="473.5" x2="571.9" y2="476.4" stroke-width="3"/>
+      <line x1="582.1" y1="451.8" x2="568.2" y2="453.3" stroke-width="3"/>
+      <line x1="601.0" y1="430.0" x2="567.0" y2="430.0" stroke-width="8"/>
+      <line x1="582.1" y1="408.2" x2="568.2" y2="406.7" stroke-width="3"/>
+      <line x1="585.6" y1="386.5" x2="571.9" y2="383.6" stroke-width="3"/>
+      <line x1="591.2" y1="365.4" x2="577.9" y2="361.1" stroke-width="3"/>
+      <line x1="599.1" y1="345.0" x2="586.3" y2="339.3" stroke-width="3"/>
+      <line x1="626.3" y1="335.5" x2="596.9" y2="318.5" stroke-width="8"/>
+      <line x1="620.9" y1="307.2" x2="609.6" y2="298.9" stroke-width="3"/>
+      <line x1="634.7" y1="290.2" x2="624.3" y2="280.8" stroke-width="3"/>
+      <line x1="650.2" y1="274.7" x2="640.8" y2="264.3" stroke-width="3"/>
+      <line x1="667.2" y1="260.9" x2="658.9" y2="249.6" stroke-width="3"/>
+      <line x1="695.5" y1="266.3" x2="678.5" y2="236.9" stroke-width="8"/>
+      <line x1="705.0" y1="239.1" x2="699.3" y2="226.3" stroke-width="3"/>
+      <line x1="725.4" y1="231.2" x2="721.1" y2="217.9" stroke-width="3"/>
+      <line x1="746.5" y1="225.6" x2="743.6" y2="211.9" stroke-width="3"/>
+      <line x1="768.2" y1="222.1" x2="766.7" y2="208.2" stroke-width="3"/>
+    </g>
+    <line x1="790" y1="430" x2="617.7" y2="460.4" stroke="#ff5a1f" stroke-width="12" stroke-linecap="round"/>
+    <line x1="790" y1="430" x2="829.4" y2="423.1" stroke="#ff5a1f" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="790" cy="430" r="20" fill="#ff5a1f"/>
+    <circle cx="790" cy="430" r="7" fill="#0b0b0d"/>
+  </g>
+  <!-- Lignes de vitesse -->
+  <g stroke="#f2f3f5" stroke-linecap="round">
+    <line x1="30" y1="330" x2="170" y2="330" stroke-width="8" opacity="0.8"/>
+    <line x1="10" y1="420" x2="120" y2="420" stroke-width="12" opacity="0.8"/>
+    <line x1="60" y1="510" x2="150" y2="510" stroke-width="6" opacity="0.8"/>
+  </g>
+  <!-- Sprinteur (pictogramme) -->
+  <g transform="translate(300 480) scale(0.85)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 -175 L-30 -150 L-70 -70" stroke-width="40" stroke="#8b939c"/>
+    <path d="M0 0 L-60 120 L-190 150" stroke-width="46" stroke="#8b939c"/>
+    <path d="M80 -175 L0 0" stroke-width="64" stroke="#f2f3f5"/>
+    <path d="M0 0 L140 20 L130 160 L176 170" stroke-width="46" stroke="#f2f3f5"/>
+    <path d="M80 -175 L170 -130 L230 -200" stroke-width="40" stroke="#f2f3f5"/>
+    <circle cx="115" cy="-245" r="48" fill="#f2f3f5"/>
+  </g>
+  <line x1="0" y1="690" x2="1200" y2="690" stroke="#8b939c" stroke-width="3" opacity="0.5"/>
+</svg>

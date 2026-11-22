@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-labelledby="coach-lea-titre">
+  <title id="coach-lea-titre">Portrait illustré de Léa Moreau, queue de cheval haute et bandeau orange, débardeur orange</title>
+  <defs>
+    <pattern id="coach-lea-trame" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="2.6" fill="#8b939c"/>
+    </pattern>
+    <clipPath id="coach-lea-visage">
+      <ellipse cx="300" cy="290" rx="92" ry="112"/>
+    </clipPath>
+  </defs>
+  <!-- Fond graphique -->
+  <rect width="600" height="600" fill="#16171a"/>
+  <polygon points="60,600 320,0 440,0 180,600" fill="#ff5a1f"/>
+  <polygon points="210,600 470,0 496,0 236,600" fill="#ff5a1f" opacity="0.5"/>
+  <polygon points="0,0 220,0 0,220" fill="url(#coach-lea-trame)" opacity="0.35"/>
+  <!-- Cheveux (arrière) -->
+  <path d="M372 200 Q470 190 478 280 Q484 360 430 420 Q452 340 420 290 Q400 250 370 240 Z" fill="#8a4b2a"/>
+  <path d="M400 230 Q450 240 456 300" fill="none" stroke="#6b3820" stroke-width="6" stroke-linecap="round"/>
+  <!-- Cou et buste -->
+  <path d="M262 360 H338 V470 H262 Z" fill="#f1c7a5"/>
+  <path d="M262 380 Q300 420 338 380 V420 Q300 445 262 420 Z" fill="#dba886"/>
+  <path d="M60 600 Q80 488 200 470 L262 460 Q300 476 338 460 L400 470 Q520 488 540 600 Z" fill="#f1c7a5"/>
+  <path d="M150 600 Q160 520 220 492 L240 486 Q300 540 360 486 L380 492 Q440 520 450 600 Z" fill="#ff5a1f"/>
+  <path d="M222 490 L206 470 M378 490 L394 470" stroke="#ff5a1f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M240 486 Q300 540 360 486" fill="none" stroke="#0b0b0d" stroke-width="6"/>
+  <!-- Visage -->
+  <ellipse cx="208" cy="300" rx="16" ry="26" fill="#dba886"/>
+  <ellipse cx="392" cy="300" rx="16" ry="26" fill="#dba886"/>
+  <ellipse cx="300" cy="290" rx="92" ry="112" fill="#f1c7a5"/>
+  <path d="M330 180 Q400 230 392 300 Q385 380 300 402 Q370 360 362 280 Q356 220 330 180 Z" fill="#dba886" clip-path="url(#coach-lea-visage)"/>
+  <ellipse cx="266" cy="296" rx="9" ry="11" fill="#0b0b0d"/>
+  <ellipse cx="334" cy="296" rx="9" ry="11" fill="#0b0b0d"/>
+  <circle cx="269" cy="292" r="3" fill="#f2f3f5"/>
+  <circle cx="337" cy="292" r="3" fill="#f2f3f5"/>
+  <path d="M248 270 Q264 262 282 268 M318 268 Q336 262 352 270" fill="none" stroke="#6b3820" stroke-width="6" stroke-linecap="round"/>
+  <path d="M300 300 L290 334 Q300 340 310 334" fill="none" stroke="#dba886" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M278 352 Q300 372 322 352" fill="none" stroke="#5a2a1e" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="250" cy="330" rx="14" ry="8" fill="#f09a86" opacity="0.5"/><ellipse cx="350" cy="330" rx="14" ry="8" fill="#f09a86" opacity="0.4"/>
+  <!-- Cheveux (avant) -->
+  <path d="M206 300 Q196 182 300 172 Q404 182 394 300 Q390 236 340 220 Q300 214 268 226 Q216 246 206 300 Z" fill="#8a4b2a"/>
+  <path d="M212 238 Q300 196 390 238 L392 256 Q300 214 208 258 Z" fill="#ff5a1f"/>
+  <circle cx="382" cy="206" r="14" fill="#6b3820"/>
+</svg>

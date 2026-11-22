@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="muscu-titre">
+  <title id="muscu-titre">Athlète soulevant au-dessus de la tête une barre chargée de disques</title>
+  <defs>
+    <clipPath id="muscu-cadre"><rect width="1200" height="800"/></clipPath>
+  </defs>
+  <rect width="1200" height="800" fill="#0b0b0d"/>
+  <!-- Rayons en éventail -->
+  <g fill="#16171a" clip-path="url(#muscu-cadre)">
+    <polygon points="600,250 1700,250 1686,422"/>
+    <polygon points="600,250 1634,626 1562,783"/>
+    <polygon points="600,250 1443,957 1322,1080"/>
+    <polygon points="600,250 1150,1203 994,1277"/>
+    <polygon points="600,250 791,1333 619,1350"/>
+    <polygon points="600,250 409,1333 242,1290"/>
+    <polygon points="600,250 50,1203 -92,1105"/>
+    <polygon points="600,250 -243,957 -343,817"/>
+    <polygon points="600,250 -434,626 -480,460"/>
+    <polygon points="600,250 -500,250 -486,78"/>
+    <polygon points="600,250 -434,-126 -362,-283"/>
+    <polygon points="600,250 -243,-457 -122,-580"/>
+    <polygon points="600,250 50,-703 206,-777"/>
+    <polygon points="600,250 409,-833 581,-850"/>
+    <polygon points="600,250 791,-833 958,-790"/>
+    <polygon points="600,250 1150,-703 1292,-605"/>
+    <polygon points="600,250 1443,-457 1543,-317"/>
+    <polygon points="600,250 1634,-126 1680,40"/>
+  </g>
+  <!-- Bandes diagonales -->
+  <polygon points="300,800 760,0 900,0 440,800" fill="#ff5a1f"/>
+  <polygon points="480,800 940,0 975,0 515,800" fill="#ff5a1f" opacity="0.5"/>
+  <!-- Ombre au sol -->
+  <ellipse cx="600" cy="734" rx="260" ry="22" fill="#000" opacity="0.6"/>
+  <line x1="60" y1="734" x2="1140" y2="734" stroke="#8b939c" stroke-width="3" opacity="0.45"/>
+  <!-- Athlète (pictogramme) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#f2f3f5">
+    <path d="M600 560 L535 640 L510 722 L465 726" stroke-width="46"/>
+    <path d="M600 560 L665 640 L690 722 L735 726" stroke-width="46"/>
+    <path d="M556 392 L644 392 L628 556 L572 556 Z" fill="#f2f3f5" stroke-width="24"/>
+    <path d="M552 394 L500 305 L490 222" stroke-width="40"/>
+    <path d="M648 394 L700 305 L710 222" stroke-width="40"/>
+  </g>
+  <circle cx="600" cy="322" r="42" fill="#f2f3f5"/>
+  <rect x="561" y="542" width="78" height="20" fill="#ff5a1f"/>
+  <!-- Barre chargée -->
+  <rect x="120" y="203" width="960" height="14" rx="7" fill="#8b939c"/>
+  <rect x="470" y="203" width="260" height="14" fill="#c4c9ce"/>
+  <g>
+    <rect x="334" y="178" width="22" height="64" rx="6" fill="#8b939c"/>
+    <rect x="277" y="50" width="46" height="320" rx="6" fill="#ff5a1f"/>
+    <rect x="297" y="66" width="6" height="288" rx="3" fill="#0b0b0d" opacity="0.25"/>
+    <rect x="227" y="50" width="46" height="320" rx="6" fill="#ff5a1f"/>
+    <rect x="247" y="66" width="6" height="288" rx="3" fill="#0b0b0d" opacity="0.25"/>
+    <rect x="187" y="95" width="34" height="230" rx="6" fill="#8b939c"/>
+    <rect x="201" y="111" width="6" height="198" rx="3" fill="#0b0b0d" opacity="0.25"/>
+    <rect x="155" y="135" width="26" height="150" rx="6" fill="#f2f3f5"/>
+    <rect x="844" y="178" width="22" height="64" rx="6" fill="#8b939c"/>
+    <rect x="877" y="50" width="46" height="320" rx="6" fill="#ff5a1f"/>
+    <rect x="897" y="66" width="6" height="288" rx="3" fill="#0b0b0d" opacity="0.25"/>
+    <rect x="927" y="50" width="46" height="320" rx="6" fill="#ff5a1f"/>
+    <rect x="947" y="66" width="6" height="288" rx="3" fill="#0b0b0d" opacity="0.25"/>
+    <rect x="979" y="95" width="34" height="230" rx="6" fill="#8b939c"/>
+    <rect x="993" y="111" width="6" height="198" rx="3" fill="#0b0b0d" opacity="0.25"/>
+    <rect x="1019" y="135" width="26" height="150" rx="6" fill="#f2f3f5"/>
+  </g>
+  <!-- Poussière de magnésie -->
+  <g fill="#f2f3f5" opacity="0.7">
+    <circle cx="452" cy="180" r="5"/><circle cx="430" cy="158" r="3"/><circle cx="470" cy="152" r="4"/>
+    <circle cx="748" cy="178" r="5"/><circle cx="772" cy="156" r="3"/><circle cx="736" cy="148" r="4"/>
+  </g>
+  <!-- Pulsation -->
+  <path d="M60 772 H140 L160 750 L185 795 L210 742 L230 772 H1140" fill="none" stroke="#ff5a1f" stroke-width="5" stroke-linejoin="round"/>
+</svg>
